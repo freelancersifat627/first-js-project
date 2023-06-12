@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count</title>
+    <style>
+        body{
+            background-color: rgba(137, 43, 226, 0.521);
+        }
+        #div{
+          
+            text-align: center;
+            margin: 100px 0;
+        }
+        #btn-one{
+            padding: 10px 20px;
+            border: none;
+            outline: none;
+            background-color: green;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #btn-two{
+            padding: 10px 20px;
+            border: none;
+            outline: none;
+            background-color: red;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section id="section">
+            <div id="div">
+                <h1>Let's Count!</h1>
+                <h2 id="count">0</h2>
+                <button id="btn-one" onclick="makePlus()">+</button>
+                <button id="btn-two" onclick="makeMainus()">-</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        // step : 1
+            // event listener.
+        // let valu = 0;
+        // document.getElementById("btn-one").addEventListener('click' , function(){
+        //     valu += 1;
+        //     document.getElementById('count').innerText = valu;
+        // })
+
+
+        // event handeler.
+        let valu = 0;
+        function makePlus(){
+            valu += 1;
+            document.getElementById('count').innerText = valu;
+        }
+
+
+
+        // step : 2
+            // event listener
+        // document.getElementById("btn-two").addEventListener('click' , function(){
+        //     valu -= 1;
+        //     document.getElementById('count').innerText = valu;
+        // })
+
+        
+        // event handeler.
+        function makeMainus(){
+            valu -= 1;
+            document.getElementById('count').innerText = valu;
+        }
+
+
+
+
+    </script>
+</body>
+</html>

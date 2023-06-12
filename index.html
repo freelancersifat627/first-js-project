@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>play with DOM event</title>
+    <style>
+        .frist-heading{
+            background-color: lightblue;
+            color: coral;
+        }
+        .text-center{
+            text-align: center;
+            padding: 8px;
+        }
+        .uppercase{
+            text-transform: capitalize;
+        }
+        .ditiels{
+            background-color: lightblue;
+        }
+        .js-dom{
+            margin-top: 100px;
+            margin-bottom: 100px;
+            text-align: center;
+        }
+        #tomato{
+            background-color: tomato;
+            /* background-color: rgba(255, 99, 71, 0.596); */
+            border: none;
+            outline: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: whitesmoke;
+        }
+        #blue{
+            background-color: blue;
+            /* background-color: #0000ff62; */
+            border: none;
+            outline: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: whitesmoke;
+        }
+        #green{
+            background-color: green;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1 id="heading">welcome to our DOM class</h1>
+        <h1 class="DOM">D - Document</h1>
+        <h1 class="DOM">O - Object</h1>
+        <h1 class="DOM">M - Model</h1>
+    </section>
+    <section id="section-two">
+        <div>
+            <h1 id="add-att">Adding attribute in js</h1>
+            <h1 id="frist-h1">Exploring quarySelector</h1>
+            <ul id="ul-container">
+                <li class="list-item">Frist</li>
+                <li class="list-item">Second</li>
+                <li class="list-item">Third</li>
+            </ul>
+        </div>
+    </section>
+    <section id="events">
+        <div class="js-dom">
+            <h1 id="title">Play with js dom events</h1>
+            <div>
+                <button id="blue" onclick="makeBlue()">Blue</button>
+                <button id="tomato" onclick="makeTomato()">Tomato</button>
+                <button id="green" onclick="makeGreen()">Green</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        // console.log(document);
+        // by tagName:-
+
+        // const taglist = document.getElementsByTagName('h1');
+        // // for(const tag of taglist){
+        // //     // console.log(tag.innerText);
+        // //     tag.style.color = "red";
+        // // }
+        // for(let i = 0; i < taglist.length; i++){
+        //     console.log(taglist[i].innerText);
+        // }
+
+        // by class name:-
+        // const classList = document.getElementsByClassName('DOM');
+        // console.log(classList);
+        // for(const value of classList){
+        //     // console.log(value.innerText);
+        //     value.style.backgroundColor = 'blue';
+        //     value.style.padding = '5px';
+        //     value.style.color = 'tomato';
+        // }
+        
+        // for(let i = 0; i < classList.length; i++){
+        //     console.log(classList[i].innerText);
+        // }
+
+        // by id:-
+
+        // console.log(document.getElementById('heading'));
+        // const myHeading = document.getElementById('heading');
+        // myHeading.style.textAlign = 'center';
+        // myHeading.style.color = 'tomato';
+        // myHeading.style.fontSize = '60px';
+        // console.log(myHeading.innerText);
+            // short Hend:-
+        // document.getElementById('heading').style.backgroundColor = 'green';
+
+        // quarySelector:-
+
+        // const myH1 = document.querySelector('#heading');
+        // console.log(myH1.innerText);
+
+        // const myClass = document.querySelector('.DOM');
+        // console.log(myClass.innerText);
+        // const myClass = document.querySelectorAll('.DOM');
+        // console.log(myClass);
+        // for(const myClasses of myClass){
+        //    myClasses.style.color = 'lightblue';
+        //     console.log(myClasses.innerText);
+        // }
+        
+        // const listItem = document.querySelectorAll('.list-item:nth-child(2)');
+        // console.log(listItem);
+        // [singe valu er jonno querySelector ar maltipul valu er jonno querySelectorAll].
+
+        // class/ id adding by js.
+
+        // const myElement = document.getElementById('frist-h1');
+        // const myElement = document.querySelector('#frist-h1');
+        // frist way.
+        // myElement.className = 'frist-heading';
+        // second way.
+        // myElement.classList.add('text-center');
+        // myElement.classList.add('uppercase');
+        // myElement.classList.remove('uppercase');
+
+        // // CREAT ELEMENT & APPEND CHILD:
+        // const myUl = document.getElementById('ul-container');
+        // const myLi = document.createElement('li');
+        // myLi.innerText = 'four';
+        // myLi.classList.add('list-item');
+        // console.log(myLi);
+        // myUl.appendChild(myLi);
+
+
+        // const mySection = document.querySelector('#section-two');
+        // // creat div;
+        // const myDiv = document.createElement('div');
+        // myDiv.className = 'div';
+        // const pTag = document.createElement('p');
+        // pTag.innerText = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, quasi modi voluptatem voluptas omnis quas rerum debitis quae? Libero optio nulla magnam quam, eaque molestias facilis reiciendis sit accusantium ipsa, veritatis pariatur tempore, ducimus quo eius. Provident quisquam ut sapiente eveniet ipsam, veritatis dolores facilis numquam rerum molestias, eius accusamus.';
+        // pTag.classList.add('ditiels');
+        // // pTag.document.setAttribute('title', 'this is a p tag');
+        // // pTag.style.borderColor = "3px solid green";
+        // myDiv.appendChild(pTag);
+        // mySection.appendChild(myDiv);
+
+        // // adding attribute in js
+        // document.getElementById("add-att").setAttribute('title' , 'this is an attribute');
+        // const myAttribute = document.getElementById("add-att").getAttribute('id');
+        // console.log(myAttribute);
+
+
+        // JS EVENTS:---------------------------------------------------
+            // 1. Event Handeler.
+
+        // function makeTomato(){
+        //     document.body.style.backgroundColor = 'coral';
+        //     const border = document.getElementById('events');
+        //     border.style.border = "3px solid black";
+        // }
+
+
+        // function makeBlue(){
+        //     document.body.style.backgroundColor = 'lightblue';
+        //     const myHeading = document.getElementById('title');
+        //     myHeading.innerText = 'play with dom , not my heart!'
+        // }
+
+        // function makeGreen(){
+        //     document.body.style.backgroundColor = 'lightgreen';
+        //     document.getElementById('title').innerText = 'make change with green color';
+        // }
+
+       
+        // 2. Event listner:-
+        const myBlueBtn = document.getElementById('blue');
+        myBlueBtn.addEventListener('click' , function(){
+            document.body.style.backgroundColor = '#0000ff62';
+            const heading = document.getElementById('title');
+            heading.innerText = 'event listner';
+        })
+
+
+        document.getElementById('tomato').addEventListener('click' , function(){
+            document.body.style.backgroundColor = 'rgba(255, 99, 71, 0.596)';
+            document.getElementById('title').innerText = 'change with event listner funcation';
+        })
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
